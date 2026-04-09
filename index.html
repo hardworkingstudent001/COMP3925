@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-HK">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -452,9 +452,6 @@
 </head>
 <body>
 
-<!-- ══════════════════════════════════════════════════════════════
-     NAV
-══════════════════════════════════════════════════════════════ -->
 <nav class="nav">
   <div class="nav-brand">🌡️ HK Heat Study</div>
   <div class="nav-links">
@@ -468,9 +465,6 @@
   </div>
 </nav>
 
-<!-- ══════════════════════════════════════════════════════════════
-     HERO
-══════════════════════════════════════════════════════════════ -->
 <section class="hero" id="top">
   <div class="hero-badge">HK Heat Study</div>
   <h1>The <span class="accent">7% Trap</span></h1>
@@ -483,9 +477,6 @@
   <a href="#data" class="hero-cta">Explore the Data ↓</a>
 </section>
 
-<!-- ══════════════════════════════════════════════════════════════
-     KPIs
-══════════════════════════════════════════════════════════════ -->
 <div class="section" style="padding-bottom:0">
   <div class="section-num">Key Performance Indicators</div>
 </div>
@@ -516,9 +507,6 @@
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════════════════════════
-     STORY
-══════════════════════════════════════════════════════════════ -->
 <section class="story" id="story">
   <h2>The Paradox of a "Green City"</h2>
   <p>Hong Kong proudly claims that <span class="hl">65% of its land</span> is covered by woodland and shrubland. Yet its citizens are among the most heat-stressed in Asia.</p>
@@ -527,9 +515,6 @@
   <p>Using real-time data from the Hong Kong Observatory, population census records, and land utilization surveys, we've uncovered the hidden geography of Hong Kong's <span class="hl">Urban Heat Islands</span>.</p>
 </section>
 
-<!-- ══════════════════════════════════════════════════════════════
-     DATA TABLE
-══════════════════════════════════════════════════════════════ -->
 <section class="section" id="data">
   <div class="section-num">Data Overview</div>
   <div class="section-title">District Summary Table</div>
@@ -553,9 +538,6 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════════════
-     01 - HEAT INTENSITY
-══════════════════════════════════════════════════════════════ -->
 <section class="section" id="intensity">
   <div class="section-num">01</div>
   <div class="section-title">Heat Intensity by District</div>
@@ -569,14 +551,11 @@
   </div>
 
   <div class="chart-grid">
-    <div class="chart-card"><h3>Sum of Intensity Score by District</h3><canvas id="intensityChart"></canvas></div>
-    <div class="chart-card"><h3>Sum of Relative Heat Stress by District</h3><canvas id="stressChart"></canvas></div>
+    <div class="chart-card"><h3>Intensity Score by District</h3><canvas id="intensityChart"></canvas></div>
+    <div class="chart-card"><h3>Relative Heat Stress by District</h3><canvas id="stressChart"></canvas></div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════════════
-     02 - URBAN HEAT DELTA
-══════════════════════════════════════════════════════════════ -->
 <section class="section" id="delta">
   <div class="section-num">02</div>
   <div class="section-title">Urban Heat Delta</div>
@@ -600,8 +579,8 @@
   </div>
 
   <div class="chart-grid">
-    <div class="chart-card"><h3>Sum of Urban Heat Delta by District</h3><canvas id="deltaChart"></canvas></div>
-    <div class="chart-card"><h3>Sum of High-Risk Pop by Urban Heat Delta</h3><canvas id="deltaPopChart"></canvas></div>
+    <div class="chart-card"><h3>Urban Heat Delta by District</h3><canvas id="deltaChart"></canvas></div>
+    <div class="chart-card"><h3>High-Risk Pop by Urban Heat Delta</h3><canvas id="deltaPopChart"></canvas></div>
   </div>
 
   <div class="case-study">
@@ -611,9 +590,6 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════════════
-     03 - POPULATION RISK
-══════════════════════════════════════════════════════════════ -->
 <section class="section" id="population">
   <div class="section-num">03</div>
   <div class="section-title">Population at Risk</div>
@@ -633,7 +609,7 @@
   </div>
 
   <div class="chart-card-full">
-    <h3>Sum of High-Risk Population Count by District</h3>
+    <h3>High-Risk Population Count by District</h3>
     <canvas id="popDistrictChart" style="max-height:350px"></canvas>
   </div>
 
@@ -651,21 +627,17 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════════════
-     04 - HEAT STRESS MAP (LEAFLET)
-══════════════════════════════════════════════════════════════ -->
 <section class="section" id="heatmap">
   <div class="section-num">04</div>
   <div class="section-title">Heat Stress Map</div>
   <div class="section-sub">Visualizing relative heat stress and population concentration across Hong Kong's 18 districts.</div>
 
-  <!-- MAP 1: Relative Heat Stress -->
   <h3 style="color:#f5a623;font-size:14px;font-weight:700;margin-bottom:12px">Relative Heat Stress (Circle Markers)</h3>
   <div class="map-wrapper">
     <div id="heatMap" class="map-box"></div>
     <div class="map-toggle">
-      <button class="active" onclick="switchTile('heatMap','default',this)">地圖</button>
-      <button onclick="switchTile('heatMap','satellite',this)">衛星</button>
+      <button class="active" onclick="switchTile('heatMap','default',this)">Map</button>
+      <button onclick="switchTile('heatMap','satellite',this)">Satellite</button>
     </div>
     <div class="map-legend">
       <h4>Heat Stress Level</h4>
@@ -679,13 +651,12 @@
     </div>
   </div>
 
-  <!-- MAP 2: High-Risk Population -->
   <h3 style="color:#f5a623;font-size:14px;font-weight:700;margin-bottom:12px">High-Risk Population Count (Circle Markers)</h3>
   <div class="map-wrapper">
     <div id="popMap" class="map-box"></div>
     <div class="map-toggle">
-      <button class="active" onclick="switchTile('popMap','default',this)">地圖</button>
-      <button onclick="switchTile('popMap','satellite',this)">衛星</button>
+      <button class="active" onclick="switchTile('popMap','default',this)">Map</button>
+      <button onclick="switchTile('popMap','satellite',this)">Satellite</button>
     </div>
     <div class="map-legend">
       <h4>At-Risk Population</h4>
@@ -699,7 +670,6 @@
     </div>
   </div>
 
-  <!-- What the Map Reveals -->
   <h3 style="color:#fff;font-size:16px;font-weight:700;margin-top:8px;margin-bottom:16px">What the Map Reveals</h3>
   <div class="reveal-grid">
     <div class="reveal-card">
@@ -717,9 +687,6 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════════════
-     05 - INSIGHTS
-══════════════════════════════════════════════════════════════ -->
 <section class="section" id="insights">
   <div class="section-num">05</div>
   <div class="section-title">Insights & Recommendations</div>
@@ -775,9 +742,6 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════════════
-     DATA SOURCES
-══════════════════════════════════════════════════════════════ -->
 <section class="section">
   <div class="section-title">Data Sources & Methodology</div>
   <div class="sources-grid" style="margin-top:20px">
@@ -804,9 +768,6 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════════════
-     FOOTER
-══════════════════════════════════════════════════════════════ -->
 <div class="footer">
   <strong>Hong Kong Urban Heat Island Study</strong><br>
   A Data Story Project · Course: Data Analytics · Submission Date: April 2026<br>
@@ -814,33 +775,30 @@
   <span class="copy">© COMP3925</span>
 </div>
 
-<!-- ══════════════════════════════════════════════════════════════
-     SCRIPTS
-══════════════════════════════════════════════════════════════ -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-// DISTRICT DATA
+// DISTRICT DATA (Converted to English)
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 const districts = [
-  { name:"Central & Western", zh:"中西區", lat:22.2860, lng:114.1500, intensity:36.2, delta:0.8, stress:0.75, pop:243200, hiRisk:85000,  density:"High" },
-  { name:"Wan Chai",          zh:"灣仔",   lat:22.2780, lng:114.1750, intensity:36.5, delta:1.0, stress:0.85, pop:166700, hiRisk:62000,  density:"High" },
-  { name:"Eastern",           zh:"東區",   lat:22.2840, lng:114.2240, intensity:35.8, delta:0.5, stress:0.70, pop:529600, hiRisk:175000, density:"High" },
-  { name:"Southern",          zh:"南區",   lat:22.2470, lng:114.1600, intensity:37.0, delta:-0.5, stress:0.35, pop:269200, hiRisk:55000,  density:"Medium" },
-  { name:"Yau Tsim Mong",     zh:"油尖旺", lat:22.3120, lng:114.1700, intensity:37.0, delta:1.5, stress:0.95, pop:318100, hiRisk:145000, density:"High" },
-  { name:"Sham Shui Po",      zh:"深水埗", lat:22.3300, lng:114.1620, intensity:36.8, delta:1.3, stress:0.90, pop:405900, hiRisk:185000, density:"High" },
-  { name:"Kowloon City",      zh:"九龍城", lat:22.3280, lng:114.1920, intensity:36.3, delta:0.9, stress:0.80, pop:418700, hiRisk:155000, density:"High" },
-  { name:"Wong Tai Sin",      zh:"黃大仙", lat:22.3420, lng:114.2030, intensity:36.4, delta:1.1, stress:0.82, pop:426200, hiRisk:190000, density:"High" },
-  { name:"Kwun Tong",         zh:"觀塘",   lat:22.3120, lng:114.2260, intensity:36.7, delta:1.4, stress:0.88, pop:648500, hiRisk:280000, density:"High" },
-  { name:"Kwai Tsing",        zh:"葵青",   lat:22.3540, lng:114.1300, intensity:35.5, delta:0.6, stress:0.72, pop:507100, hiRisk:175000, density:"Medium" },
-  { name:"Tsuen Wan",         zh:"荃灣",   lat:22.3710, lng:114.1140, intensity:35.2, delta:1.8, stress:0.65, pop:303600, hiRisk:105000, density:"Medium" },
-  { name:"Tuen Mun",          zh:"屯門",   lat:22.3910, lng:113.9770, intensity:33.8, delta:-0.3, stress:0.55, pop:495900, hiRisk:125000, density:"Medium" },
-  { name:"Yuen Long",         zh:"元朗",   lat:22.4450, lng:114.0220, intensity:38.0, delta:-2.0, stress:0.50, pop:614200, hiRisk:140000, density:"Medium" },
-  { name:"North",             zh:"北區",   lat:22.4960, lng:114.1380, intensity:33.5, delta:-2.0, stress:0.40, pop:304500, hiRisk:70000,  density:"Low" },
-  { name:"Tai Po",            zh:"大埔",   lat:22.4510, lng:114.1710, intensity:34.2, delta:-1.2, stress:0.45, pop:303200, hiRisk:80000,  density:"Low" },
-  { name:"Sha Tin",           zh:"沙田",   lat:22.3820, lng:114.1950, intensity:35.0, delta:0.3, stress:0.60, pop:659800, hiRisk:165000, density:"Medium" },
-  { name:"Sai Kung",          zh:"西貢",   lat:22.3830, lng:114.2700, intensity:34.5, delta:2.0, stress:0.30, pop:476700, hiRisk:85000,  density:"Low" },
-  { name:"Islands",           zh:"離島",   lat:22.2610, lng:113.9460, intensity:33.0, delta:-1.5, stress:0.20, pop:186100, hiRisk:35000,  density:"Low" },
+  { name:"Central & Western", zh:"Central & Western", lat:22.2860, lng:114.1500, intensity:36.2, delta:0.8, stress:0.75, pop:243200, hiRisk:85000,  density:"High" },
+  { name:"Wan Chai",          zh:"Wan Chai",          lat:22.2780, lng:114.1750, intensity:36.5, delta:1.0, stress:0.85, pop:166700, hiRisk:62000,  density:"High" },
+  { name:"Eastern",           zh:"Eastern",           lat:22.2840, lng:114.2240, intensity:35.8, delta:0.5, stress:0.70, pop:529600, hiRisk:175000, density:"High" },
+  { name:"Southern",          zh:"Southern",          lat:22.2470, lng:114.1600, intensity:37.0, delta:-0.5, stress:0.35, pop:269200, hiRisk:55000,  density:"Medium" },
+  { name:"Yau Tsim Mong",     zh:"Yau Tsim Mong",     lat:22.3120, lng:114.1700, intensity:37.0, delta:1.5, stress:0.95, pop:318100, hiRisk:145000, density:"High" },
+  { name:"Sham Shui Po",      zh:"Sham Shui Po",      lat:22.3300, lng:114.1620, intensity:36.8, delta:1.3, stress:0.90, pop:405900, hiRisk:185000, density:"High" },
+  { name:"Kowloon City",      zh:"Kowloon City",      lat:22.3280, lng:114.1920, intensity:36.3, delta:0.9, stress:0.80, pop:418700, hiRisk:155000, density:"High" },
+  { name:"Wong Tai Sin",      zh:"Wong Tai Sin",      lat:22.3420, lng:114.2030, intensity:36.4, delta:1.1, stress:0.82, pop:426200, hiRisk:190000, density:"High" },
+  { name:"Kwun Tong",         zh:"Kwun Tong",         lat:22.3120, lng:114.2260, intensity:36.7, delta:1.4, stress:0.88, pop:648500, hiRisk:280000, density:"High" },
+  { name:"Kwai Tsing",        zh:"Kwai Tsing",        lat:22.3540, lng:114.1300, intensity:35.5, delta:0.6, stress:0.72, pop:507100, hiRisk:175000, density:"Medium" },
+  { name:"Tsuen Wan",         zh:"Tsuen Wan",         lat:22.3710, lng:114.1140, intensity:35.2, delta:1.8, stress:0.65, pop:303600, hiRisk:105000, density:"Medium" },
+  { name:"Tuen Mun",          zh:"Tuen Mun",          lat:22.3910, lng:113.9770, intensity:33.8, delta:-0.3, stress:0.55, pop:495900, hiRisk:125000, density:"Medium" },
+  { name:"Yuen Long",         zh:"Yuen Long",         lat:22.4450, lng:114.0220, intensity:38.0, delta:-2.0, stress:0.50, pop:614200, hiRisk:140000, density:"Medium" },
+  { name:"North",             zh:"North",             lat:22.4960, lng:114.1380, intensity:33.5, delta:-2.0, stress:0.40, pop:304500, hiRisk:70000,  density:"Low" },
+  { name:"Tai Po",            zh:"Tai Po",            lat:22.4510, lng:114.1710, intensity:34.2, delta:-1.2, stress:0.45, pop:303200, hiRisk:80000,  density:"Low" },
+  { name:"Sha Tin",           zh:"Sha Tin",           lat:22.3820, lng:114.1950, intensity:35.0, delta:0.3, stress:0.60, pop:659800, hiRisk:165000, density:"Medium" },
+  { name:"Sai Kung",          zh:"Sai Kung",          lat:22.3830, lng:114.2700, intensity:34.5, delta:2.0, stress:0.30, pop:476700, hiRisk:85000,  density:"Low" },
+  { name:"Islands",           zh:"Islands",           lat:22.2610, lng:113.9460, intensity:33.0, delta:-1.5, stress:0.20, pop:186100, hiRisk:35000,  density:"Low" },
 ];
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -853,7 +811,7 @@ function renderTable(data) {
   data.forEach(d => {
     const dc = d.density === 'High' ? 'density-high' : d.density === 'Medium' ? 'density-med' : 'density-low';
     tbody.innerHTML += `<tr>
-      <td>${d.zh} ${d.name}</td>
+      <td>${d.name}</td>
       <td class="num">${d.intensity.toFixed(1)}</td>
       <td class="num">${d.delta > 0 ? '+' : ''}${d.delta.toFixed(2)}</td>
       <td class="num">${(d.stress * 100).toFixed(0)}%</td>
@@ -881,7 +839,7 @@ function sortTable(col) {
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // CHART HELPERS
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-const labels = districts.map(d => d.zh);
+const labels = districts.map(d => d.name);
 const chartOpts = (horizontal = false) => ({
   indexAxis: horizontal ? 'y' : 'x',
   responsive: true,
@@ -950,7 +908,7 @@ const sorted = [...districts].sort((a, b) => a.delta - b.delta);
 new Chart(document.getElementById('deltaPopChart'), {
   type: 'bar',
   data: {
-    labels: sorted.map(d => d.zh),
+    labels: sorted.map(d => d.name),
     datasets: [{
       data: sorted.map(d => d.hiRisk),
       backgroundColor: sorted.map(d => d.delta >= 1 ? '#d93025' : d.delta >= 0 ? '#e37400' : '#4285f4'),
@@ -1052,7 +1010,7 @@ buildMap('heatMap', (map) => {
       radius: r, fillColor: c, fillOpacity: 0.5, color: c, weight: 2, opacity: 0.85
     }).addTo(map);
     m.bindPopup(`<div class="popup-card">
-      <h3>${d.zh} ${d.name}</h3>
+      <h3>${d.name}</h3>
       <div class="stat-row"><span>Heat Stress</span><span class="val">${(d.stress*100).toFixed(0)}%</span></div>
       <div class="stat-row"><span>Intensity</span><span class="val">${d.intensity}°C</span></div>
       <div class="stat-row"><span>Delta</span><span class="val">${d.delta > 0 ? '+' : ''}${d.delta.toFixed(2)}</span></div>
@@ -1074,7 +1032,7 @@ buildMap('popMap', (map) => {
       radius: r, fillColor: c, fillOpacity: 0.45, color: c, weight: 2, opacity: 0.85
     }).addTo(map);
     m.bindPopup(`<div class="popup-card">
-      <h3>${d.zh} ${d.name}</h3>
+      <h3>${d.name}</h3>
       <div class="stat-row"><span>High-Risk Pop</span><span class="val">${d.hiRisk.toLocaleString()}</span></div>
       <div class="stat-row"><span>Total Pop</span><span class="val">${d.pop.toLocaleString()}</span></div>
       <div class="stat-row"><span>Heat Stress</span><span class="val">${(d.stress*100).toFixed(0)}%</span></div>
@@ -1111,5 +1069,27 @@ window.addEventListener('scroll', () => {
   });
 });
 </script>
+<footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>Hong Kong Urban Heat Island Study</h4>
+                    <p>A Data Story Project</p>
+                    <p>Course: Data Analytics</p>
+                    <p>Submission Date: April 2026</p>
+                </div>
+                <div class="footer-team">
+                    <h4>Team Members</h4>
+                    <p>23222700 Wu Hoi Ching</p>
+                    <p>25201913 Lam Ho Man</p>
+                    <p>25203649 Ng Siu Man</p>
+                    <p>25203673 Lam Hiu Tung</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Data sources: Hong Kong Observatory, Planning Department, Census and Statistics Department</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
